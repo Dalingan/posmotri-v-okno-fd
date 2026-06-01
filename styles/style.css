@@ -8,19 +8,6 @@ html {
   block-size: 100%;
 }
 
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
-}
-
 h1,
 h2,
 h3,
@@ -40,27 +27,17 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 4px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgb(217 217 217 / 10%);
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #d9d9d9;
-}
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
 }
 
 .content {
@@ -118,22 +95,23 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 1px;
+}
+
+.search-form__label-text {
+  line-height: 100%;
 }
 
 .search-form__textfield {
   inline-size: 225px;
   border: none;
-  border-block-start: 1px solid #fff;
-  border-block-end: 1px solid #fff;
+  border-block-start: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
   outline: none;
   appearance: none;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 100%;
+  color: inherit;
+  font: inherit;
   background-color: transparent;
 }
 
@@ -146,11 +124,15 @@ ol {
   gap: 15px;
 }
 
+.search-form__checkbox {
+  appearance: none;
+}
+
 .search-form__pseudo-checkbox {
   display: block;
   inline-size: 19px;
   block-size: 19px;
-  border: 1px solid #fff;
+  outline: 1px solid currentColor;
   padding: 1px;
 }
 
@@ -159,7 +141,7 @@ ol {
   display: block;
   inline-size: 100%;
   block-size: 100%;
-  background-color: #fff;
+  background-color: currentColor;
   opacity: 0;
 }
 
@@ -208,7 +190,7 @@ ol {
 
 .content__card-link {
   display: block;
-  color: #fff;
+  color: inherit;
   text-decoration: none;
 }
 
@@ -229,7 +211,7 @@ ol {
 }
 
 .content__card-link:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 1px;
 }
 
@@ -260,15 +242,14 @@ ol {
 .content__video-card-description {
   display: -webkit-box;
   overflow: hidden;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font: inherit;
   line-height: 16.2px;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
 }
 
 .content__video-card-thumbnail {
+  display: block;
   inline-size: 194px;
   block-size: 103px;
   flex-shrink: 0;
@@ -278,12 +259,11 @@ ol {
 
 .button {
   block-size: 34px;
-  border: 1px solid #fff;
+  border: none;
   padding: 6px 0;
-  outline: none;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
+  outline: 1px solid currentColor;
+  color: inherit;
+  font: inherit;
   font-weight: 700;
   line-height: 100%;
   background-color: transparent;
@@ -303,11 +283,34 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid currentColor;
   outline-offset: 1px;
 }
 
 .more-button {
   inline-size: 100%;
-  margin-top: 30px;
+  margin-block-start: 30px;
+}
+
+/* Кастомный скроллбар */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #d9d9d9;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
