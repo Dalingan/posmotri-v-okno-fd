@@ -174,7 +174,6 @@ ol {
 .content__list-container {
   position: relative;
   block-size: 298px;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 
@@ -258,10 +257,10 @@ ol {
 }
 
 .button {
+  box-sizing: border-box;
   block-size: 34px;
-  border: none;
   padding: 6px 0;
-  outline: 1px solid currentColor;
+  border: 1px solid currentColor;
   color: inherit;
   font: inherit;
   font-weight: 700;
